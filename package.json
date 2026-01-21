@@ -1,0 +1,55 @@
+{
+  "name": "react-i18n-extract",
+  "version": "1.0.0",
+  "description": "CLI tool for extracting and managing i18n translations in React applications",
+  "main": "dist/index.js",
+  "bin": {
+    "react-i18n": "dist/index.js",
+    "ri18n": "dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --dts --clean",
+    "dev": "tsup src/index.ts --format esm --watch",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "react",
+    "i18n",
+    "internationalization",
+    "translation",
+    "extractor",
+    "cli",
+    "localization",
+    "l10n"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@babel/generator": "^7.27.0",
+    "@babel/parser": "^7.27.0",
+    "@babel/traverse": "^7.27.0",
+    "@babel/types": "^7.27.0",
+    "@google-cloud/translate": "^8.5.0",
+    "chalk": "^5.4.1",
+    "commander": "^13.1.0",
+    "fast-glob": "^3.3.3",
+    "ora": "^8.2.0",
+    "inquirer": "^12.4.2"
+  },
+  "devDependencies": {
+    "@types/babel__generator": "^7.6.8",
+    "@types/babel__traverse": "^7.20.6",
+    "@types/node": "^22.15.29",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3"
+  }
+}
